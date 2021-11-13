@@ -17,6 +17,9 @@ require_once ('../../Database/db.php');
   </head>
   <body>
     <ul class="nav nav-tabs">
+		<li class="nav-item">
+	    <a class="nav-link " href="../../FrontEnd/">HomePage</a>
+	  </li>
 	  <li class="nav-item">
 	    <a class="nav-link active" href="#">Quản Lý Danh Mục</a>
 	  </li>

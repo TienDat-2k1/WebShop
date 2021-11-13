@@ -110,11 +110,17 @@ if(!empty($_POST))
    </head>
    <body>
    <ul class="nav nav-tabs">
+   <li class="nav-item">
+	    <a class="nav-link " href="../../FrontEnd/">HomePage</a>
+	  </li>
 	  <li class="nav-item">
 	    <a class="nav-link" href="index.php">Quản Lý Danh Mục</a>
 	  </li>
 	  <li class="nav-item">
 	    <a class="nav-link" href="../product/">Quản Lý Sản Phẩm</a>
+	  </li>
+      <li class="nav-item">
+	    <a class="nav-link " href="index.php">HomePage</a>
 	  </li>
 	</ul>
 

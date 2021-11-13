@@ -192,10 +192,16 @@ if(isset($_GET['id']))
    <body>
    <ul class="nav nav-tabs">
 	  <li class="nav-item">
+     <li class="nav-item">
+	    <a class="nav-link " href="../../FrontEnd/">HomePage</a>
+	  </li>
 	    <a class="nav-link" href="index.php">Quản Lý Danh Mục</a>
 	  </li>
 	  <li class="nav-item">
 	    <a class="nav-link" href="../product/">Quản Lý Sản Phẩm</a>
+	  </li>
+     <li class="nav-item">
+	    <a class="nav-link " href="../order/">Quản lý đơn hàng</a>
 	  </li>
 	</ul>
 

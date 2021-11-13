@@ -51,26 +51,8 @@ if(isset($_GET['id']))
     <title>Hello, world!</title>
   </head>
   <body>
-    <ul class="nav nav-tabs">
-    <li class="nav-item">
-	    <a class="nav-link " href="../../FrontEnd/">HomePage</a>
-	  </li>
-	  <li class="nav-item">
-	    <a class="nav-link " href="../category/">Quản Lý Danh Mục</a>
-	  </li>
-	  <li class="nav-item">
-	    <a class="nav-link" href="../product/">Quản Lý Sản Phẩm</a>
-	  </li>
-	  <li class="nav-item">
-	    <a class="nav-link " href="../order/">Quản Lý Đơn Hàng</a>
-	  </li>
-	</ul>
-
 	<div class="container">
 		<div class="panel panel-primary">
-			<div class="panel-heading">
-				<h2 class="text-center">Đơn hàng</h2>
-			</div>
 			<div class="grid wide" style="display:flex; justify-content: center;">
                 <div style="text-align:center; padding:15px; display:inline-block;border-radius:5px">
                     <p class="headerShop">CỬA HÀNG REROLLACC CHUYÊN CUNG CẤP CÁC SẢN PHẨM LAPTOP</p>
@@ -117,36 +99,16 @@ if(isset($_GET['id']))
                                 </tbody>
                             </table>
                             <div style="font-size:18px; text-align:right; padding-right:15px">Ngày đặt hàng: <?=$dateorder?></div>
-                            <div style="display:flex;font-size:16px; justify-content: space-between;">
-                                <p style=" font-weight:600">Tổng tiền:  <span style=" color:red; font-weight:bold"><?=convertmoney($total)?></span></p>
+                            <div style="display:flex;font-size:16px; flex-direction:row-reverse; margin-top:20px; font-size:24px">
+                                <p style=" font-weight:600;">Tổng tiền:  <span style=" color:red; font-weight:bold"><?=convertmoney($total)?></span></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <?php
-            //
-            echo '<a href="download.php?id='.$id.'" download="infobill'.$id.'.doc"  style="display:flex;justify-content:center; margin:20px 0 140px 0;"> <button type="button" style="font-size:20px" class="btn btn-primary">Download</button></a>';
-            ?>
-            
 		</div>
 	</div>
   <script type="text/javascript">
-    // function deleteCategory(id) {
-    //   console.log(id);
-	// 	var option=confirm('Bạn có chắc chắn muốn xóa không?');
-	// 	if(!option)
-	// 	{
-	// 		return;
-	// 	}
-	//   $.post('process.php',{
-	// 	  'id': id,
-	// 	  'action': 'delete'
-	//   }, function(data)
-	//   {
-	// 	location.reload()
-	//   })
-    // } 
   </script>
     <!-- Optional JavaScript; choose one of the two! -->
 

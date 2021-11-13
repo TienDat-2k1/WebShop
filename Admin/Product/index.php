@@ -1,6 +1,8 @@
 <?php
 require_once ('../../Database/db.php');
 require_once ('../../common/utility.php');
+require_once ('../../FrontEnd/HomePage/asssets/function/convertmoney.php');
+
 $number=0;
 $id='';
 ?>
@@ -21,6 +23,9 @@ $id='';
   <body>
     <ul class="nav nav-tabs">
 	  <li class="nav-item">
+	  <li class="nav-item">
+	    <a class="nav-link " href="../../FrontEnd/">HomePage</a>
+	  </li>
 	    <a class="nav-link" href="../Category">Quản Lý Danh Mục</a>
 	  </li>
 	  <li class="nav-item">
@@ -124,7 +129,7 @@ foreach ($categoryList as $item) {
 				<td>'.($index++).'</td>
 				<td><img src= "'.$item['linkImg'].'"style="max-width:100px"/></td>
 				<td>'.$item['title'].'</td>
-				<td>'.$item['price'].'</td>
+				<td>'.convertmoney($item['price']).'</td>
 				<td>'.$item['amount'].'</td>
 				<td>'.$item['update_at'].'</td>
 

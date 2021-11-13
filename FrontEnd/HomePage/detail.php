@@ -240,11 +240,11 @@ if(isset($_GET['id']))
                             echo '<img src="../../Admin/Product/'.$linkimg.'" alt="img" style="width:100%";>';
                         ?>
                     </div>
-                    <div class="col-xl-4">
+                    <div class="col-xl-4" style ="display: flex;flex-direction:column;justify-content: space-between;">
                         <div>
                             <span style="font-size:32px;color:red; padding:0 40px;"><?=$moneyprod?> đ</span>
                         </div>
-                        <div style="margin-top:140px; padding:0 40px; height:72px">
+                        <div style="margin-bottom:20px; padding:0 40px; height:72px">
                         <?php $hrefff ='#'; 
                         if(isset($_COOKIE['id']))
                          {
@@ -280,7 +280,9 @@ if(isset($_GET['id']))
                             <a href="<?=$hrefff?>" style="width:100%; height:100%;"><button type="button" class="btn btn-primary" style="width:100%;height:100%; font-size:32px; border-radius:10px">Mua Ngay</button></a>
                         </div>
                     </div>
-                    
+                    <div class="col-xl-4" style="background-color:#f3f3f3; border-radius:6px">
+                        <h4 class="alert-heading" style="font-size:28px; padding:0 15px; margin-top: 3px; border-bottom:2px solid #a7d2fd">Thông tin cấu hình</h4>
+                    </div>
                 </div>
                 <div style="border-style: dashed; border-color: #6495ED; border-radius:10px; margin-top: 40px; background-color: #F0F8FF;">
                     <?php

@@ -258,13 +258,15 @@ if (!empty($_POST)) {
                         ?>
                              
                     </div>
-                    <div class="col-xl-4">
-                        <div style="width:100%">
-                            <p class="Price_cart"><?=convertmoney($total) ?></p>
+                    <div class="col col-xl-4 col-md-0">
+                        <div class="">
+                            <div style="width:100%">
+                                <p class="Price_cart"><?=convertmoney($total) ?></p>
+                            </div>
+                            <div style="margin-top:140px; height:72px">
+                                <button onclick="direct()" class="btn btn-primary" style="width:100%; height:100%; border-radius:10px; font-size:32px; font-weight:600">Thanh toán</button>
+                            </div>
                         </div>
-                        <div style="margin-top:140px; height:72px">
-                            <button onclick="direct()" class="btn btn-primary" style="width:100%; height:100%; border-radius:10px; font-size:32px; font-weight:600">Thanh toán</button>
-                         </div>
                     </div>
                 </div>
             </div>

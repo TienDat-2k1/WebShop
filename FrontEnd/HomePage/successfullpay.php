@@ -25,12 +25,17 @@ if(!empty($_POST))
             {
                 $idbill=0;
             }
+            
             foreach($getlistcart as $item)
             {
                 $sqlorder='insert into bill(id,idproduct,count,idguest,dateorder,status)
                     value("'.($idbill+1).'","'.$item['id'].'","'.$item['numprod']
                     .'","'.$_COOKIE['id'].'","'.$dateorder.'","Tiếp nhận đơn hàng thành công")';
                 execute($sqlorder);
+                $sql='select *from product where id='.$item['id'];
+                $p=executeSingleResult($sql);
+                $sql='update product set amount ='.($p['amount']-$item['numprod']);
+                execute($sql);
             }
             $sqldeletecart='delete from cart where id_acc ='.$_COOKIE['id'];
             execute($sqldeletecart);

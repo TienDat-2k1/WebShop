@@ -92,10 +92,12 @@ if(isset($_GET['id']))
                 </ul>
             </div>
             <div class="grid wide content_header">
-                <a href="index.php" class="header-logoSection">
-                    <img src="asssets/img/pngaaa.com-5751053.png" alt="" class="headerlogo">
-                    <span>ReRollAcc.Vn</span>
-                </a>
+                <div class="col">
+                    <a href="index.php" class="header-logoSection">
+                        <img src="asssets/img/pngaaa.com-5751053.png" alt="" class="headerlogo">
+                        <span>ReRollAcc.Vn</span>
+                    </a>
+                </div>
                 <div class="header-searchSection">
                     <div class="header-searchSectionWrap">
                         <span></span>
@@ -125,46 +127,6 @@ if(isset($_GET['id']))
                     </div>
                     <span>Thông báo</span>
                     <!-- header Notification -->
-                    <div class="headerNotify" id="notifyBox">
-                        <div class="headerNotify-heading">
-                            <h3>Thông báo mới nhận <span>17</span></h3>
-                        </div>
-                        <div class="notifi-item">
-                            <img src="./asssets/img/avatar1.png" alt="">
-                            <div class="notifi-text">
-                                <h4>Elias</h4>
-                                <p>@i wil give you</p>
-                            </div>
-                        </div>
-                        <div class="notifi-item">
-                            <img src="./asssets/img/avatar2.png" alt="">
-                            <div class="notifi-text">
-                                <h4>Elias</h4>
-                                <p>@i wil give you</p>
-                            </div>
-                        </div>
-                        <div class="notifi-item">
-                            <img src="./asssets/img/avatar3.png" alt="">
-                            <div class="notifi-text">
-                                <h4>Elias</h4>
-                                <p>@i wil give you</p>
-                            </div>
-                        </div>
-                        <div class="notifi-item">
-                            <img src="./asssets/img/avatar4.png" alt="">
-                            <div class="notifi-text">
-                                <h4>Elias</h4>
-                                <p>@i wil give you</p>
-                            </div>
-                        </div>
-                        <div class="notifi-item">
-                            <img src="./asssets/img/avatar5.png" alt="">
-                            <div class="notifi-text">
-                                <h4>Elias</h4>
-                                <p>@i wil give you</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                <div class="headerCart">
                     <?php
@@ -187,7 +149,7 @@ if(isset($_GET['id']))
                             </div>
                             <i class="fas fa-shopping-cart"></i>
                         </div>
-                        <span>Giỏ hàng</span>
+                        <span class="carttttt">Giỏ hàng</span>
                         
                     </a>
                 </div>
@@ -228,10 +190,12 @@ if(isset($_GET['id']))
                         $num=ceil($countResult['total']/$limit);
                         foreach($listproduct as $item)
                         {
-                            echo '<div class ="l-2-4" style="font-size:16px; margin-bottom:14px">
-                            <div style="background-color:#ececec; padding:2px; border: 1px solid #eee; border-radius:6px; height:100% ">
+                            echo '<div class ="l-2-4 col-md-3 col-sm-4 col-6" style="font-size:16px; margin-bottom:14px">
+                            <div style="background-color:#ececec; padding:2px; border: 1px solid #eee; border-radius:6px; height:100%; display:flex;flex-direction:column; justify-content: space-between; ">
+                            <div>
                             <a href="detail.php?id='.$item['id'].'"><img src="../../Admin/Product/'.$item['linkImg'].'" alt="img" style ="width: 100%"> </a>
                             <a href="detail.php?id='.$item['id'].'" style="text-decoration: none; color: black; font-weight:500;">'.$item['title'].'</a>
+                            </div>
                             <p style="color:red; font-weight:bold">'.convertmoney($item['price']).' đ</p>
                             </div>
                             </div>';
@@ -240,6 +204,7 @@ if(isset($_GET['id']))
                 </div>
                 <div style= "height:42px; margin:20px 0;font-size:24px; display:flex; justify-content:center">
                     <nav aria-label="Page navigation" style="height:100%">
+                    <div></div>
                     <ul class="pagination">
                         <?php
                         if($num >1)

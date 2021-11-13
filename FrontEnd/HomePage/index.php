@@ -227,9 +227,11 @@ require_once ('./asssets/function/convertmoney.php');
                                     foreach($list5product as $item)
                                     {
                                         echo '<div class ="l-2-4" style="font-size:16px; margin-bottom:14px">
-                                        <div style="background-color:#ececec; padding:2px; border: 1px solid #eee; border-radius:6px; height:100% ">
-                                        <a href="detail.php?id='.$item['id'].'"><img src="../../Admin/Product/'.$item['linkImg'].'" alt="img" style ="width: 100%"> </a>
-                                        <a href="detail.php?id='.$item['id'].'" style="text-decoration: none; color: black; font-weight:500;">'.$item['title'].'</a>
+                                        <div style="background-color:#ececec; padding:2px; border: 1px solid #eee; border-radius:6px; height:100%;display:flex;flex-direction:column; justify-content: space-between; ">
+                                        <div>
+                                            <a href="detail.php?id='.$item['id'].'"><img src="../../Admin/Product/'.$item['linkImg'].'" alt="img" style ="width: 100%"> </a>
+                                            <a href="detail.php?id='.$item['id'].'" style="text-decoration: none; color: black; font-weight:500;">'.$item['title'].'</a>
+                                        </div>
                                         <p style="color:red; font-weight:bold">'.convertmoney($item['price']).' đ</p>
                                         </div>
                                         </div>';
