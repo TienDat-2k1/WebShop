@@ -10,16 +10,19 @@ $email='';
 $phone='';
 $address='';
 if(isset($_COOKIE['id']))
-{
+{   
     $idc = $_COOKIE['id'];
     $sql='select * from guest where id_acc = '.$idc;
     $guest= executeSingleResult($sql);
-    $firstname=$guest['firstname'];
-    $lastname=$guest['lastname'];
-    $email=$guest['email'];
-    $phone=$guest['phone'];
-    $address=$guest['address'];
-
+    if($guest !=null)
+    {
+        $firstname=$guest['firstname'];
+        $lastname=$guest['lastname'];
+        $email=$guest['email'];
+        $phone=$guest['phone'];
+        $address=$guest['address'];
+    }
+    
 
 }
 

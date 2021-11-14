@@ -1,5 +1,10 @@
 <?php
  require_once ('../../Database/db.php');
+$firstname = '';
+$lastname = '';
+$email = '';
+$phone = '';
+$address = '';
  if(isset($_COOKIE['id']))
  {
     $id = $_COOKIE['id'];
@@ -15,10 +20,35 @@ if(!empty($_POST))
     $email = $_POST["email"];
     $phone = $_POST["phone"];
     $address = $_POST["address"];
+    $sql='select*from guest where id_acc='.$_GET['id'];
+    $guest=executeSingleResult($sql);
+    if($guest !=null)
+    {
+        $sql='update guest set firstname= "'.$firstname.'" , lastname="'.$lastname.'" , email="'.$email.'" , phone="'.$phone.'" , address="'.$address.'" where id_acc='.$id;
+        execute($sql);
+        header('Location: index.php');
 
-    $insertGuestQuery = "INSERT INTO `guest`(`id_acc`, `firstname`, `lastname`, `email`, `phone`, `address`) VALUES ($id,'$firstname','$lastname','$email','$phone','$address')";
-    execute($insertGuestQuery);
-    header('Location: index.php');
+    }
+    else
+    {
+        $insertGuestQuery = "INSERT INTO `guest`(`id_acc`, `firstname`, `lastname`, `email`, `phone`, `address`) VALUES ($id,'$firstname','$lastname','$email','$phone','$address')";
+        execute($insertGuestQuery);
+        header('Location: index.php');
+
+    }
+}
+if(isset($_GET['id']))
+{
+    $sql='select*from guest where id_acc='.$_GET['id'];
+    $guest=executeSingleResult($sql);
+    if($guest !=null)
+    {
+        $firstname = $guest['firstname'];
+        $lastname = $guest['lastname'];
+        $email = $guest['email'];
+        $phone = $guest['phone'];
+        $address = $guest['address'];
+    }
 }
 ?>
 
@@ -154,27 +184,27 @@ input[type='submit']:hover{
         <h1>Nhập thông tin</h1>
         <form method="post">
             <div class="txt_field">
-                <input type="text" name="firstname" required>
+                <input type="text" name="firstname" value=<?=$firstname?> required>
                 <span></span>
                 <label>Tên</label>
             </div>
             <div class="txt_field">
-                <input type="text" name="lastname" required>
+                <input type="text" name="lastname" value=<?=$lastname?> required>
                 <span></span>
                 <label>Họ</label>
             </div>
             <div class="txt_field">
-                <input type="email" name="email" required>
+                <input type="email" name="email"value=<?=$email?> required>
                 <span></span>
                 <label>Email</label>
             </div>
             <div class="txt_field">
-                <input type="tel" name="phone" required>
+                <input type="tel" name="phone" value=<?=$phone?> required>
                 <span></span>
                 <label>Số điện thoại</label>
             </div>
             <div class="txt_field">
-                <input type="text" name="address" required>
+                <input type="text" name="address" value=<?=$address?> required>
                 <span></span>
                 <label>Địa chỉ</label>
             </div>

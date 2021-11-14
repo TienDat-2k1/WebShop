@@ -12,13 +12,20 @@ if(!empty($_POST))
         if(isset($_POST['firstname'])&&isset($_POST['lastname'])&&isset($_POST['email'])&&
         isset($_POST['phone'])&&isset($_POST['address']))
         {
-            $sqlguest="update guest set firstname ='".$_POST['firstname']."' , lastname= '".$_POST['lastname']."' , 
-            email = '".$_POST['email']."' , phone = '".$_POST['phone']."' , address = '".$_POST['address']."' where id_acc =".$_COOKIE['id'];
-            execute($sqlguest);
+            $sql='select * from guest where id_acc = '.$_COOKIE['id'];
+            $guest = executeSingleResult($sql);
+            if($guest != null) {
+                $sqlguest="update guest set firstname ='".$_POST['firstname']."' , lastname= '".$_POST['lastname']."' , 
+                email = '".$_POST['email']."' , phone = '".$_POST['phone']."' , address = '".$_POST['address']."' where id_acc =".$_COOKIE['id'];
+                execute($sqlguest);
+            } else {
+                $sqlguest="INSERT INTO guest(id_acc, firstname, lastname, email, phone, address) VALUES (".$_COOKIE['id'].",'".$_POST['firstname']."','".$_POST['lastname']."','".$_POST['email']."','".$_POST['phone']."','".$_POST['address']."')";
+                execute($sqlguest);
+            }
             $sqllistcart= 'SELECT product.id, product.title, product.price, product.linkImg, cart.numprod FROM cart, product WHERE cart.id_acc = '.$_COOKIE['id'].' and product.id=cart.id_pro';
             $getlistcart= executeResult($sqllistcart);
             $dateorder=date('Y-m-d H:s:i');
-            $sqlsetidbill='select MAX(id) as idbill from bill where idguest ='.$_COOKIE['id'];
+            $sqlsetidbill='select MAX(id) as idbill from bill';
             $getidbill=executeSingleResult($sqlsetidbill);
             $idbill=$getidbill['idbill'];
             if($idbill==null)

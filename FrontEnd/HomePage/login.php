@@ -13,7 +13,7 @@
            $id = $acc["id"];
            $cookie_name = "id";
            $cookie_value = $id;
-           setcookie($cookie_name, $cookie_value, time() + (60*5), '/');
+           setcookie($cookie_name, $cookie_value, time() + (60*30), '/');
            if(isset($_GET['id']))
            {
                 $idproduct=$_GET['id'];

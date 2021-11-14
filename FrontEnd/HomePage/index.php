@@ -59,7 +59,7 @@ require_once ('./asssets/function/convertmoney.php');
                             <span>'.displayname().'</span>
                             <ul class="nav_user-menu">
                                 <li class="nav_user-item">
-                                    <a href="getinfo.php">Thông tin tài khoản</a>
+                                    <a href="getinfo.php?id='.$_COOKIE['id'].'">Thông tin tài khoản</a>
                                 </li>
                                 <li class="nav_user-item">
                                     <a href="">Đơn mua</a>
@@ -86,7 +86,7 @@ require_once ('./asssets/function/convertmoney.php');
             <div class="grid wide content_header">
                 <a href="#" class="header-logoSection">
                     <img src="asssets/img/pngaaa.com-5751053.png" alt="" class="headerlogo">
-                    <span>ReRollAcc.Vn</span>
+                    <span> HoMa.Vn</span>
                 </a>
                 <div class="header-searchSection">
                     <div class="header-searchSectionWrap">

@@ -11,7 +11,7 @@ if(isset($_GET['idbill']))
     $idbill=$_GET['idbill'];
     $sqlbil='select *from bill where id='.$idbill;
     $bill1=executeSingleResult($sqlbil);
-    $sqlgetguest='select *from guest where id ='.$bill1['idguest'];
+    $sqlgetguest='select *from guest where id_acc ='.$bill1['idguest'];
     $guest=executeSingleResult($sqlgetguest);
 }
 

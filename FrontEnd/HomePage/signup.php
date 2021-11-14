@@ -39,7 +39,7 @@
                 $insertAccountData = execute($insertAccountQuery);
                 $cookie_name = "id";
                 $cookie_value = getIdAccount($_POST["usernameAccount"]);
-                setcookie($cookie_name, $cookie_value, time() + (60*5), "/");
+                setcookie($cookie_name, $cookie_value, time() + (60*30), "/");
                 header( "Location: getinfo.php" );
             } else {
                 echo '<script language="javascript">';
