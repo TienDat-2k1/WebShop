@@ -29,7 +29,7 @@ if(isset($_GET['id']))
     <link rel="stylesheet" href="./asssets/css/responsive.css">
     <link rel="stylesheet" href="./asssets/css/base.css">
     <link rel="stylesheet" href="./asssets/css/main.css">
-    <title>Document</title>
+    <title>Homa.Vn</title>
 </head>
 <body>
     <div class="wrapper">

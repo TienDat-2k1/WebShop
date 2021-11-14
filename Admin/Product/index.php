@@ -140,7 +140,7 @@ foreach ($categoryList as $item) {
 		}
 	}
 }
-if(!empty($s) )
+if(!empty($s))
 	{
 		$sql='select *from product where 1 and title like "%'.$s.'%"';
 		$listp=executeResult($sql);
