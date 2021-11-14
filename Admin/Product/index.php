@@ -97,6 +97,7 @@ $additional='';
 if(isset($_GET['s']))
 {
 	$s=$_GET['s'];
+	
 }
 if(!empty($_GET))
 {
@@ -112,10 +113,6 @@ if(!empty($_GET))
 	if(isset($_GET['cate']))
 	{
 		$id=$_GET['cate'];
-		if(!empty($s))
-		{
-			$additional=' and name like "%'.$s.'%"';
-		}
 //Lay danh sach danh muc tu database
 $sql          = 'select * from product where id_category='.$id.' limit '.$firtindex.' , '.$limit;
 $categoryList = executeResult($sql);
@@ -143,6 +140,29 @@ foreach ($categoryList as $item) {
 		}
 	}
 }
+if(!empty($s) )
+	{
+		$sql='select *from product where 1 and title like "%'.$s.'%"';
+		$listp=executeResult($sql);
+		$index = 1;
+		foreach ($listp as $item) {
+			echo '<tr>
+						<td>'.($index++).'</td>
+						<td><img src= "'.$item['linkImg'].'"style="max-width:100px"/></td>
+						<td>'.$item['title'].'</td>
+						<td>'.convertmoney($item['price']).'</td>
+						<td>'.$item['amount'].'</td>
+						<td>'.$item['update_at'].'</td>
+		
+						<td>
+							<a href="add.php?id='.$item['id'].'"><button class="btn btn-warning">Sửa</button></a>
+						</td>
+						<td>
+							<button class="btn btn-danger" onclick="deleteProduct('.$item['id'].')">Xoá</button>
+						</td>
+					</tr>';
+				}
+	}
 ?>
 					</tbody>
 				</table>

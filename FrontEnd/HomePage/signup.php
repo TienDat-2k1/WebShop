@@ -190,17 +190,17 @@ input[type='submit']:hover{
         <h1>Đăng kí</h1>
         <form action="signup.php" method="post">
             <div class="txt_field">
-                <input type="text" name="usernameAccount" required>
+                <input type="text" name="usernameAccount" >
                 <span></span>
                 <label>Tên tài khoản</label>
             </div>
             <div class="txt_field">
-                <input type="password" name="passwordAccount" required>
+                <input type="password" name="passwordAccount" >
                 <span></span>
                 <label>Mật khẩu</label>
             </div>
             <div class="txt_field">
-                <input type="password" name="confirmPasswordAccount" required>
+                <input type="password" name="confirmPasswordAccount" >
                 <span></span>
                 <label>Xác nhận mật khẩu</label>
             </div>

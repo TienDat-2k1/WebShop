@@ -246,7 +246,7 @@ if (!empty($_POST)) {
                                     <form method="POST" action="" style="display: flex">
                                         <div style ="width:120px; display:flex; height:30px;font-size:18px;">
                                             <button id="decre"onclick="decreP('.$item['id'].','.$idacc.','.$item['numprod'].')" style="border-right: 0px;">-</button>
-                                            <input type="number" name="num" value="'.$item['numprod'].'" id="num">
+                                            <input type="text" name="num" value="'.$item['numprod'].'" id="num">
                                             <button id="incre" onclick="increP('.$item['id'].','.$idacc.','.$item['numprod'].')" style="border-left: 0px;">+</button>
                                         </div>
                                         <button onclick="deletePcart('.$item['id'].','.$idacc.')" style="margin-left:20px; width:40px; border-radius:10px; font-weight:600; font-size:14px">Xóa</button>
