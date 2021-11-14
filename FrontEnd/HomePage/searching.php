@@ -88,7 +88,7 @@ if(isset($_GET['s']))
             <div class="grid wide content_header">
                 <a href="index.php" class="header-logoSection">
                     <img src="asssets/img/pngaaa.com-5751053.png" alt="" class="headerlogo">
-                    <span>ReRollAcc.Vn</span>
+                    <span>Homa.Vn</span>
                 </a>
                 <div class="header-searchSection">
                     <div class="header-searchSectionWrap">
@@ -187,7 +187,7 @@ if(isset($_GET['s']))
                 </div>
             </div>
         </div>
-        <div class="main-body" style="padding-top:40px">
+        <div class="main-body" style="padding-top:40px; min-height:500px">
             <div>
                 <nav class="navbar navbar-expand-sm" style="background: linear-gradient(45deg, #d6d6d6, #fff);height:40px;position: fixed; top:140px;left:0; right:0">
                 <!-- Links -->
@@ -199,7 +199,7 @@ if(isset($_GET['s']))
                 </ul>
                 </nav>
             </div>
-            <div class="grid wide">
+            <div class="grid wide" >
                 <div class="row">
                     <?php
                     $limit =20;

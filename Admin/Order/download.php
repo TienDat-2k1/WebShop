@@ -55,7 +55,7 @@ if(isset($_GET['id']))
 		<div class="panel panel-primary">
 			<div class="grid wide" style="display:flex; justify-content: center;">
                 <div style="text-align:center; padding:15px; display:inline-block;border-radius:5px">
-                    <p class="headerShop">CỬA HÀNG REROLLACC CHUYÊN CUNG CẤP CÁC SẢN PHẨM LAPTOP</p>
+                    <p class="headerShop">CỬA HÀNG Homa.Vn CHUYÊN CUNG CẤP CÁC SẢN PHẨM LAPTOP</p>
                     <h1 style="font-size:35px">HÓA ĐƠN MUA HÀNG</h1>
                     <h2 style="font-size:20px">KHÁCH HÀNG: <?=($guest['lastname'].' '.$guest['firstname'])?></h2>
                     <h2 style="font-size:20px">Số Điện Thoại: <?=$guest['phone']?></h2>

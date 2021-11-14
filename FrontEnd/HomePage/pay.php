@@ -107,7 +107,7 @@ if(isset($_COOKIE['id']))
             <div class="grid wide content_header">
                 <a href="index.php" class="header-logoSection">
                     <img src="asssets/img/pngaaa.com-5751053.png" alt="" class="headerlogo">
-                    <span>ReRollAcc.Vn</span>
+                    <span>Homa.Vn</span>
                 </a>
                 <div class="header-searchSection">
                     <div class="header-searchSectionWrap">

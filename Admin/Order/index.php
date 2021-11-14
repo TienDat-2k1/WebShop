@@ -1,5 +1,22 @@
 <?php
 require_once ('../../Database/db.php');
+if (!empty($_POST)) {
+	if (isset($_POST['action'])) {
+		$action = $_POST['action'];
+
+		switch ($action) {
+			case 'delete':
+				if (isset($_POST['id'])) {
+					$id = $_POST['id'];
+
+					$sql = 'delete from bill where id = '.$id;
+					execute($sql);
+					
+				}
+				break;
+		}
+	}
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -72,7 +89,7 @@ foreach ($categoryList as $item) {
                         <a href="updatebill.php?id='.$item['id'].'"><button class="btn btn-warning">Cập nhật</button></a>
                     </td>
                     <td>
-                        <button class="btn btn-danger" onclick="deleteCategory('.$item['id'].')">Xoá</button>
+                        <button class="btn btn-danger" onclick="deletebill('.$item['id'].')">Xoá</button>
                     </td>
                 </tr>';
 
@@ -86,21 +103,21 @@ foreach ($categoryList as $item) {
 		</div>
 	</div>
   <script type="text/javascript">
-    // function deleteCategory(id) {
-    //   console.log(id);
-	// 	var option=confirm('Bạn có chắc chắn muốn xóa không?');
-	// 	if(!option)
-	// 	{
-	// 		return;
-	// 	}
-	//   $.post('process.php',{
-	// 	  'id': id,
-	// 	  'action': 'delete'
-	//   }, function(data)
-	//   {
-	// 	location.reload()
-	//   })
-    // } 
+    function deletebill(id) {
+      console.log(id);
+		var option=confirm('Bạn có chắc chắn muốn xóa không?');
+		if(!option)
+		{
+			return;
+		}
+	  $.post('',{
+		  'id': id,
+		  'action': 'delete'
+	  }, function(data)
+	  {
+		location.reload()
+	  })
+    } 
   </script>
     <!-- Optional JavaScript; choose one of the two! -->
 

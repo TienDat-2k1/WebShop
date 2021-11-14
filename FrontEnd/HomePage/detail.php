@@ -82,7 +82,7 @@ if(isset($_GET['id']))
                             <span>'.displayname().'</span>
                             <ul class="nav_user-menu">
                                 <li class="nav_user-item">
-                                    <a href="">Thông tin tài khoản</a>
+                                    <a href="getinfo.php?id='.$_COOKIE['id'].'">Thông tin tài khoản</a>
                                 </li>
                                 <li class="nav_user-item">
                                     <a href="">Đơn mua</a>
@@ -95,6 +95,9 @@ if(isset($_GET['id']))
                                     echo'<li class="nav_user-item">
                                     <a href="../../Admin">Admin</a>
                                 </li>';
+                                     echo'<li class="nav_user-item">
+                                        <a href="signup.php">Thêm Admin</a>
+                                    </li>';
                                 }
                                 echo '
                             </ul>
@@ -106,7 +109,7 @@ if(isset($_GET['id']))
             <div class="grid wide content_header">
                 <a href="index.php" class="header-logoSection">
                     <img src="asssets/img/pngaaa.com-5751053.png" alt="" class="headerlogo">
-                    <span>ReRollAcc.Vn</span>
+                    <span>Homa.Vn</span>
                 </a>
                 <div class="header-searchSection">
                     <div class="header-searchSectionWrap">
@@ -220,7 +223,7 @@ if(isset($_GET['id']))
                         <a class="nav-link" href="category.php?id='.$catg['id'].'" style="color: #000; font-weight:400 ;font-size:12px;">>> '.$catg['name'].'</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#" style="color: #000; font-weight:400 ;font-size:12px;">>> '.$title.'</a>
+                        <a class="nav-link" href="#" style="color: #000; font-weight:400 ;font-size:12px; display: inline-block; max-width: 400px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">>> '.$title.'</a>
                     </li>';
                     ?>
                 </ul>
@@ -229,7 +232,7 @@ if(isset($_GET['id']))
             <div class="titleproduct ">
                 <div class="grid wide">
                     <?php
-                        echo '<h1>'.$title.'</h1>';
+                        echo '<h1 style="max-width:100%; white-space: nowrap;   overflow: hidden;text-overflow: ellipsis; ">'.$title.'</h1>';
                     ?>
                 </div>
             </div>

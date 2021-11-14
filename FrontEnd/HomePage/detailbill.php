@@ -101,7 +101,7 @@ if(isset($_GET['idbill']))
             <div class="grid wide content_header">
                 <a href="index.php" class="header-logoSection">
                     <img src="asssets/img/pngaaa.com-5751053.png" alt="" class="headerlogo">
-                    <span>ReRollAcc.Vn</span>
+                    <span>Homa.Vn</span>
                 </a>
                 <div class="header-searchSection">
                     <div class="header-searchSectionWrap">
@@ -177,9 +177,11 @@ if(isset($_GET['idbill']))
             </div>
             <div class="grid wide">
                 <div style="text-align:center">
-                    <p class="headerShop">CỬA HÀNG REROLLACC CHUYÊN CUNG CẤP CÁC SẢN PHẨM LAPTOP</p>
+                    <p class="headerShop">CỬA HÀNG Homa.Vn CHUYÊN CUNG CẤP CÁC SẢN PHẨM LAPTOP</p>
                     <h1 style="font-size:35px">HÓA ĐƠN MUA HÀNG</h1>
                     <h2 style="font-size:20px">KHÁCH HÀNG: <?=($guest['lastname'].' '.$guest['firstname'])?></h2>
+                    <h2 style="font-size:20px">Số điện thoại: <?=$guest['phone']?></h2>
+
                     <h3 class="address">Địa chỉ: Số 10-Dường 231A-Phường Tân Phú-Quận 9</h3>
                     <h3 class="address">Địa chỉ giao hàng: <?=$guest['address']?></h3>
 

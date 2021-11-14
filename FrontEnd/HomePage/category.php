@@ -70,7 +70,7 @@ if(isset($_GET['id']))
                             <span>'.displayname().'</span>
                             <ul class="nav_user-menu">
                                 <li class="nav_user-item">
-                                    <a href="">Thông tin tài khoản</a>
+                                    <a href="getinfo.php?id='.$_COOKIE['id'].'">Thông tin tài khoản</a>
                                 </li>
                                 <li class="nav_user-item">
                                     <a href="">Đơn mua</a>
@@ -83,6 +83,9 @@ if(isset($_GET['id']))
                                     echo'<li class="nav_user-item">
                                     <a href="../../Admin">Admin</a>
                                 </li>';
+                                     echo'<li class="nav_user-item">
+                                        <a href="signup.php">Thêm Admin</a>
+                                    </li>';
                                 }
                                 echo '
                             </ul>
@@ -95,7 +98,7 @@ if(isset($_GET['id']))
                 <div class="col">
                     <a href="index.php" class="header-logoSection">
                         <img src="asssets/img/pngaaa.com-5751053.png" alt="" class="headerlogo">
-                        <span>ReRollAcc.Vn</span>
+                        <span>Homa.Vn</span>
                     </a>
                 </div>
                 <div class="header-searchSection">
@@ -194,9 +197,9 @@ if(isset($_GET['id']))
                             <div style="background-color:#ececec; padding:2px; border: 1px solid #eee; border-radius:6px; height:100%; display:flex;flex-direction:column; justify-content: space-between; ">
                             <div>
                             <a href="detail.php?id='.$item['id'].'"><img src="../../Admin/Product/'.$item['linkImg'].'" alt="img" style ="width: 100%"> </a>
-                            <a href="detail.php?id='.$item['id'].'" style="text-decoration: none; color: black; font-weight:500;">'.$item['title'].'</a>
+                            <a href="detail.php?id='.$item['id'].'" style="text-decoration: none;padding:4px 4px; color: black; font-weight:500;max-height:100px;display:inline-block;overflow:hidden">'.$item['title'].'</a>
                             </div>
-                            <p style="color:red; font-weight:bold">'.convertmoney($item['price']).' đ</p>
+                            <p style="color:red; font-weight:bold; padding-left:4px">'.convertmoney($item['price']).' đ</p>
                             </div>
                             </div>';
                         }

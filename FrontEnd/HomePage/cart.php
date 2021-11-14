@@ -122,7 +122,7 @@ if (!empty($_POST)) {
                             <span>'.displayname().'</span>
                             <ul class="nav_user-menu">
                                 <li class="nav_user-item">
-                                    <a href="">Thông tin tài khoản</a>
+                                    <a href="getinfo.php?id='.$_COOKIE['id'].'">Thông tin tài khoản</a>
                                 </li>
                                 <li class="nav_user-item">
                                     <a href="">Đơn mua</a>
@@ -135,6 +135,9 @@ if (!empty($_POST)) {
                                     echo'<li class="nav_user-item">
                                     <a href="../../Admin">Admin</a>
                                 </li>';
+                                    echo'<li class="nav_user-item">
+                                            <a href="signup.php">Thêm Admin</a>
+                                        </li>';
                                 }
                                 echo '
                             </ul>
@@ -147,7 +150,7 @@ if (!empty($_POST)) {
             <div class="grid wide content_header">
                 <a href="index.php" class="header-logoSection">
                     <img src="asssets/img/pngaaa.com-5751053.png" alt="" class="headerlogo">
-                    <span>ReRollAcc.Vn</span>
+                    <span>Homa.Vn</span>
                 </a>
                 <div class="header-searchSection">
                     <div class="header-searchSectionWrap">
@@ -293,7 +296,7 @@ if (!empty($_POST)) {
 		{
 			return;
 		}
-	  $.post('cart.php',{
+	  $.post('',{
 		  'id': id,
           'idacc': idacc,
 		  'action': 'delete'
@@ -306,7 +309,7 @@ if (!empty($_POST)) {
       console.log(id);
       console.log(idacc);
       console.log(num);
-	  $.post('cart.php',{
+	  $.post('',{
 		  'id': id,
           'idacc': idacc,
           'num':num,
@@ -320,7 +323,7 @@ if (!empty($_POST)) {
       console.log(id);
       console.log(idacc);
       console.log(num);
-	  $.post('cart.php',{
+	  $.post('',{
 		  'id': id,
           'idacc': idacc,
           'num':num,
